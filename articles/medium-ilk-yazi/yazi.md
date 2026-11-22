@@ -48,7 +48,7 @@ AI alarmlarımı daha hızlı çözüyor diyebilmem için şu an ne kadar hızl�
 
 > **Veri notu:** Aşağıdaki 30 günlük sayılar gerçek bir ortamdan gelmiyor. Bilinen davranışlara sahip bir üreticiyle (`alerthealth generate`) kurduğum, tekrar üretilebilen bir veri seti bu. Hangi kuralın gürültülü, hangi alarmın gerçek olduğunu üretirken ben belirledim. Yani sayılar gerçek dünyadaki oranları değil, yöntemin ve aracın nerede doğru, nerede yanlış çalıştığını gösteriyor. Kendi ortamında çalıştırınca başka sayılar göreceksin.
 
-### Lab'da tek bir arıza
+### Lab'da CPU arızası
 
 Prometheus, node_exporter, Alertmanager ve Zabbix 5.0.17'den oluşan bir test ortamı kurdum. Sonra `stress-ng` ile 120 saniyelik bir CPU yükünü iki kez bindirdim. İlk denemede yalnızca Prometheus alarm verdi. Ekran görüntülerini ayrıca, benzer bir yük sırasında aldım, bu yüzden saatler birbirini tutmuyor.
 

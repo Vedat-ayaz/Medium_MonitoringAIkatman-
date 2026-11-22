@@ -77,7 +77,7 @@ with plt.xkcd(scale=.5,length=140,randomness=1):
     box(ax,3.9,1.7,2.2,1.2,ACC,"#fdeee8",2.2); ax.text(5,2.3,"ortak şema\n(AlertEvent)",ha="center",va="center",fontsize=15,color=ACC)
     ax.annotate("",xy=(6.9,2.3),xytext=(6.2,2.3),arrowprops=dict(arrowstyle="->",lw=1.6,color=MUT))
     box(ax,7,.5,2.8,3.6,DK); ax.text(8.4,3.7,"8 sayı",ha="center",fontsize=15,fontweight="bold")
-    for i,m in enumerate(["hacim","yoğunlaşma","gürültü oranı","aksiyon oranı","MTTA / MTTR","gece sayfalama","korelasyon"]): ax.text(7.25,3.25-i*.4,m,fontsize=12,color=INK)
+    for i,m in enumerate(["hacim","yoğunlaşma","gürültü oranı","aksiyon oranı","MTTA","MTTR","gece sayfalama","korelasyon"]): ax.text(7.25,3.3-i*.37,m,fontsize=12,color=INK)
     fig.savefig(O+"08-akis.png",bbox_inches="tight"); plt.close()
 
 with plt.xkcd(scale=.5,length=140,randomness=1):
@@ -86,3 +86,16 @@ with plt.xkcd(scale=.5,length=140,randomness=1):
         box(ax,x,.2,4.6,4,c,fc); ax.text(x+.25,3.75,t,fontsize=13,fontweight="bold",color=c)
         for i,it in enumerate(items): ax.text(x+.25,3.15-i*.48,f"{i+1}. {it}",fontsize=12,color=INK)
     fig.savefig(O+"09-yol-haritasi.png",bbox_inches="tight"); plt.close()
+
+# serinin bitmiş hali
+with plt.xkcd(scale=.5,length=140,randomness=1):
+    fig,ax=plt.subplots(figsize=(10,4.6),dpi=150); ax.axis("off"); ax.set_xlim(0,10); ax.set_ylim(0,4.6)
+    box(ax,.2,.3,2.1,3.9,DK,"#f4f2ee"); ax.text(1.25,3.75,"Mevcut ürünler",ha="center",fontsize=11.5,fontweight="bold",color=DK)
+    for i,n in enumerate(["Zabbix","Prometheus","ELK"]): ax.text(1.25,2.9-i*.9,n,ha="center",va="center",fontsize=14)
+    ax.annotate("",xy=(2.9,2.25),xytext=(2.4,2.25),arrowprops=dict(arrowstyle="->",lw=1.6,color=MUT))
+    box(ax,3,.3,4.2,3.9,ACC,"#fdeee8",2.2); ax.text(5.1,3.75,"AI katmanı (bu seri)",ha="center",fontsize=13,fontweight="bold",color=ACC)
+    for i,m in enumerate(["ortak şema ve özet","gürültü ve eşik","korelasyon","kök neden","eski vakalardan öneri"]): ax.text(3.35,3.15-i*.6,m,fontsize=12.5,color=INK)
+    ax.annotate("",xy=(7.8,2.25),xytext=(7.3,2.25),arrowprops=dict(arrowstyle="->",lw=1.6,color=MUT))
+    box(ax,7.9,.3,1.9,3.9,DK,"#f4f2ee"); ax.text(8.85,3.75,"İnsan",ha="center",fontsize=13,fontweight="bold",color=DK)
+    ax.text(8.85,2.6,"öneriyi görür",ha="center",fontsize=12); ax.text(8.85,2.0,"onaylar",ha="center",fontsize=12); ax.text(8.85,1.4,"aksiyonu alır",ha="center",fontsize=12)
+    fig.savefig(O+"10-mimari.png",bbox_inches="tight"); plt.close()

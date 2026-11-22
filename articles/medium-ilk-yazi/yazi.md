@@ -10,7 +10,7 @@ Kapaktaki rakam sentetik bir veri setinden: 30 günlük alarm akışında her 10
 
 Şirkette kullandığımız monitoring ürününde bir sürü alarm geliyor. Ürün işini yapıyor, bir şey ters gidince haber veriyor. Asıl iş ondan sonra başlıyor. Bu alarm önemli mi? Öbürleriyle aynı olayın parçası mı? Sebebi ne? Daha önce görmüş müydük, ne yapmıştık? Bunların cevabı ekranda yazmıyor. Biri bakıp kafasında birleştiriyor.
 
-Aklıma hep aynı soru geliyor: yapay zekâ bu işte ne kadar kullanılabilir? Özetlemek kolay, ama kök nedeni bulabilir mi? Eski incident'lara bakıp "şunu yap" diyebilir mi? Aksiyonu kendisi mi almalı? Bilmiyorum.
+Aklıma hep aynı soru geliyor: yapay zekâ bu işte ne kadar kullanılabilir? Özetlemek kolay, ama kök nedeni bulabilir mi? Eski incident'lara bakıp "şunu yap" diyebilir mi? Aksiyonu kendisi mi almalı?
 
 Sektör de aynı yöne gidiyor. Datadog, Dynatrace ve New Relic artık kendi AI SRE ajanlarını sunuyor ([Mezmo](https://www.mezmo.com/learn/the-2026-ai-sre-market-map-agents-harnesses-and-the-data-layer)). Mesela Dynatrace'in Davis'i alarmları zamana bakıp yan yana koymuyor, sistemin topolojisini dolaşıp kök nedeni arıyor ([Dynatrace](https://www.dynatrace.com/news/blog/ai-driven-analytics-and-automation-for-unified-observability/)). Kendi ortamlarında günde yüz binlerce olayı dört beş incident'a indirdiklerini yazıyorlar ([Dynatrace](https://dynatrace.com/news/blog/advancing-aiops-preventive-operations-powered-by-davis-ai)).
 

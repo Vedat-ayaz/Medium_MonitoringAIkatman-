@@ -1,0 +1,18 @@
+[project]
+name = "alerthealth"
+version = "0.1.0"
+description = "Monitoring alert geçmişinin sağlık ölçümü (Medium dizisi: Monitoring'e AI Katmanı)"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.scripts]
+alerthealth = "alerthealth.cli:main"
+
+[tool.setuptools]
+packages = ["alerthealth", "alerthealth.adapters"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

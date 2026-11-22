@@ -1,0 +1,391 @@
+{
+  "result": {
+    "window": {
+      "start": "2026-09-01T00:27:19+00:00",
+      "end": "2026-10-01T18:01:58+00:00",
+      "days": 30.73
+    },
+    "totals": {
+      "alerts": 8413,
+      "per_day": 273.75021607898833,
+      "rules": 21,
+      "entities": 24,
+      "sources": [
+        "elk",
+        "synthetic"
+      ],
+      "still_open": 3
+    },
+    "by_severity": {
+      "critical": 118,
+      "high": 180,
+      "warning": 8112,
+      "info": 3
+    },
+    "pareto": {
+      "rules_for_80pct_volume": 5,
+      "top10pct_rules_share": 0.4160228218233686,
+      "top_n": 2
+    },
+    "actionable": {
+      "labeled": 8413,
+      "rate": 0.07333888030429098
+    },
+    "noise": {
+      "noisy_rules": 6,
+      "noisy_volume": 7857,
+      "noisy_volume_share": 0.9339118031617735,
+      "criteria": "count>=10 ve (kısa süreli(<5 dk)>=%50 veya tekrar>=%50 veya ack<%20)"
+    },
+    "timing": [
+      {
+        "severity": "critical",
+        "count": 118,
+        "mtta_n": 81,
+        "mtta_median_min": 8.75,
+        "mtta_p90_min": 21.433333333333334,
+        "mttr_n": 118,
+        "mttr_median_min": 67.41666666666666,
+        "mttr_p90_min": 108.11666666666666
+      },
+      {
+        "severity": "high",
+        "count": 180,
+        "mtta_n": 138,
+        "mtta_median_min": 7.824999999999999,
+        "mtta_p90_min": 25.41166666666666,
+        "mttr_n": 177,
+        "mttr_median_min": 66.16666666666667,
+        "mttr_p90_min": 110.74666666666667
+      },
+      {
+        "severity": "warning",
+        "count": 8112,
+        "mtta_n": 661,
+        "mtta_median_min": 8.3,
+        "mtta_p90_min": 22.85,
+        "mttr_n": 8112,
+        "mttr_median_min": 2.2333333333333334,
+        "mttr_p90_min": 3.65
+      },
+      {
+        "severity": "info",
+        "count": 3,
+        "mtta_n": 3,
+        "mtta_median_min": 4.2,
+        "mtta_p90_min": 5.266666666666667,
+        "mttr_n": 3,
+        "mttr_median_min": 2245.633333333333,
+        "mttr_p90_min": 3295.34
+      }
+    ],
+    "night_pages": {
+      "count": 120,
+      "tz_offset_hours": 3.0,
+      "per_week": 27.33272096830503
+    },
+    "bursts": {
+      "labeled": {
+        "incidents_total": 12,
+        "incident_bursts": 12,
+        "noise_bursts": 1175,
+        "incidents_split_across_bursts": 0
+      },
+      "bursts": 1187,
+      "alerts_in_bursts": 5664,
+      "share_in_bursts": 0.6732437893735885,
+      "avg_burst_size": 4.771693344566133,
+      "max_burst_size": 36,
+      "reduction_ratio": 2.1374491869918697
+    },
+    "rules": [
+      {
+        "rule": "PingLoss",
+        "count": 1760,
+        "per_day": 57.268558219305774,
+        "entities": 6,
+        "median_duration_min": 2.283333333333333,
+        "short_share": 1.0,
+        "flap_share": 0.07613636363636364,
+        "ack_rate": 0.07840909090909091,
+        "actionable_rate": 0.03125,
+        "labeled": 1760,
+        "noisy": true
+      },
+      {
+        "rule": "HighLoadAverage",
+        "count": 1740,
+        "per_day": 56.61777914863184,
+        "entities": 6,
+        "median_duration_min": 2.25,
+        "short_share": 1.0,
+        "flap_share": 0.07586206896551724,
+        "ack_rate": 0.08850574712643679,
+        "actionable_rate": 0.027586206896551724,
+        "labeled": 1740,
+        "noisy": true
+      },
+      {
+        "rule": "HighCPU>80%",
+        "count": 1700,
+        "per_day": 55.316221007283986,
+        "entities": 6,
+        "median_duration_min": 2.283333333333333,
+        "short_share": 1.0,
+        "flap_share": 0.06764705882352941,
+        "ack_rate": 0.07764705882352942,
+        "actionable_rate": 0.03235294117647059,
+        "labeled": 1700,
+        "noisy": true
+      },
+      {
+        "rule": "ErrorLogRate>50/min",
+        "count": 931,
+        "per_day": 30.293765739871404,
+        "entities": 19,
+        "median_duration_min": 2.0166666666666666,
+        "short_share": 0.9656283566058003,
+        "flap_share": 0.06659505907626208,
+        "ack_rate": 0.08592910848549946,
+        "actionable_rate": 0.07733619763694952,
+        "labeled": 931,
+        "noisy": true
+      },
+      {
+        "rule": "SlowQuery>2s",
+        "count": 867,
+        "per_day": 28.21127271371483,
+        "entities": 4,
+        "median_duration_min": 2.033333333333333,
+        "short_share": 1.0,
+        "flap_share": 0.049596309111880045,
+        "ack_rate": 0.06805074971164937,
+        "actionable_rate": 0.03690888119953864,
+        "labeled": 867,
+        "noisy": true
+      },
+      {
+        "rule": "AuthFailureBurst",
+        "count": 859,
+        "per_day": 27.95096108544526,
+        "entities": 4,
+        "median_duration_min": 2.0,
+        "short_share": 1.0,
+        "flap_share": 0.05587892898719441,
+        "ack_rate": 0.05820721769499418,
+        "actionable_rate": 0.06169965075669383,
+        "labeled": 859,
+        "noisy": true
+      },
+      {
+        "rule": "DiskUsage>80%",
+        "count": 170,
+        "per_day": 5.5316221007283986,
+        "entities": 6,
+        "median_duration_min": 1001.3916666666667,
+        "short_share": 0.0,
+        "flap_share": 0.0,
+        "ack_rate": 0.2411764705882353,
+        "actionable_rate": 0.1,
+        "labeled": 170,
+        "noisy": false
+      },
+      {
+        "rule": "DiskWatermarkLogWarning",
+        "count": 117,
+        "per_day": 3.807057563442486,
+        "entities": 4,
+        "median_duration_min": 894.4333333333333,
+        "short_share": 0.0,
+        "flap_share": 0.0,
+        "ack_rate": 0.20512820512820512,
+        "actionable_rate": 0.13675213675213677,
+        "labeled": 117,
+        "noisy": false
+      },
+      {
+        "rule": "QueueBacklog",
+        "count": 46,
+        "per_day": 1.4967918625500372,
+        "entities": 18,
+        "median_duration_min": 65.875,
+        "short_share": 0.0,
+        "flap_share": 0.08695652173913043,
+        "ack_rate": 0.7391304347826086,
+        "actionable_rate": 1.0,
+        "labeled": 46,
+        "noisy": false
+      },
+      {
+        "rule": "HealthcheckFailed",
+        "count": 45,
+        "per_day": 1.4642529090163408,
+        "entities": 20,
+        "median_duration_min": 70.11666666666666,
+        "short_share": 0.0,
+        "flap_share": 0.044444444444444446,
+        "ack_rate": 0.6888888888888889,
+        "actionable_rate": 1.0,
+        "labeled": 45,
+        "noisy": false
+      },
+      {
+        "rule": "LatencyP95>1s",
+        "count": 45,
+        "per_day": 1.4642529090163408,
+        "entities": 20,
+        "median_duration_min": 70.46666666666667,
+        "short_share": 0.0,
+        "flap_share": 0.06666666666666667,
+        "ack_rate": 0.6444444444444445,
+        "actionable_rate": 1.0,
+        "labeled": 45,
+        "noisy": false
+      },
+      {
+        "rule": "HTTP5xxRate>5%",
+        "count": 34,
+        "per_day": 1.1063244201456797,
+        "entities": 18,
+        "median_duration_min": 65.36666666666667,
+        "short_share": 0.0,
+        "flap_share": 0.029411764705882353,
+        "ack_rate": 0.7941176470588235,
+        "actionable_rate": 1.0,
+        "labeled": 34,
+        "noisy": false
+      },
+      {
+        "rule": "UpstreamTimeoutLogs",
+        "count": 34,
+        "per_day": 1.1063244201456797,
+        "entities": 20,
+        "median_duration_min": 67.65,
+        "short_share": 0.0,
+        "flap_share": 0.029411764705882353,
+        "ack_rate": 0.7647058823529411,
+        "actionable_rate": 1.0,
+        "labeled": 34,
+        "noisy": false
+      },
+      {
+        "rule": "ConnectionRefusedLogs",
+        "count": 29,
+        "per_day": 0.9436296524771973,
+        "entities": 16,
+        "median_duration_min": 62.45,
+        "short_share": 0.0,
+        "flap_share": 0.034482758620689655,
+        "ack_rate": 0.7931034482758621,
+        "actionable_rate": 1.0,
+        "labeled": 29,
+        "noisy": false
+      },
+      {
+        "rule": "ServiceDown",
+        "count": 12,
+        "per_day": 0.39046744240435755,
+        "entities": 10,
+        "median_duration_min": 38.3,
+        "short_share": 0.0,
+        "flap_share": 0.0,
+        "ack_rate": 1.0,
+        "actionable_rate": 1.0,
+        "labeled": 12,
+        "noisy": false
+      },
+      {
+        "rule": "DBReplicationLag",
+        "count": 8,
+        "per_day": 0.26031162826957166,
+        "entities": 5,
+        "median_duration_min": 50.75833333333333,
+        "short_share": 0.0,
+        "flap_share": 0.0,
+        "ack_rate": 1.0,
+        "actionable_rate": 1.0,
+        "labeled": 8,
+        "noisy": false
+      },
+      {
+        "rule": "BackupJobFailed",
+        "count": 4,
+        "per_day": 0.13015581413478583,
+        "entities": 4,
+        "median_duration_min": 219.49166666666667,
+        "short_share": 0.0,
+        "flap_share": 0.0,
+        "ack_rate": 1.0,
+        "actionable_rate": 1.0,
+        "labeled": 4,
+        "noisy": false
+      },
+      {
+        "rule": "OOMKilledLog",
+        "count": 4,
+        "per_day": 0.13015581413478583,
+        "entities": 4,
+        "median_duration_min": 17.666666666666664,
+        "short_share": 0.0,
+        "flap_share": 0.0,
+        "ack_rate": 1.0,
+        "actionable_rate": 1.0,
+        "labeled": 4,
+        "noisy": false
+      },
+      {
+        "rule": "CertExpiry<30d",
+        "count": 3,
+        "per_day": 0.09761686060108939,
+        "entities": 2,
+        "median_duration_min": 2245.633333333333,
+        "short_share": 0.0,
+        "flap_share": 0.0,
+        "ack_rate": 1.0,
+        "actionable_rate": 1.0,
+        "labeled": 3,
+        "noisy": false
+      },
+      {
+        "rule": "DiskUsage>90%",
+        "count": 3,
+        "per_day": 0.09761686060108939,
+        "entities": 3,
+        "median_duration_min": null,
+        "short_share": null,
+        "flap_share": 0.0,
+        "ack_rate": 0.6666666666666666,
+        "actionable_rate": 1.0,
+        "labeled": 3,
+        "noisy": false
+      },
+      {
+        "rule": "TLSHandshakeFailures",
+        "count": 2,
+        "per_day": 0.06507790706739291,
+        "entities": 2,
+        "median_duration_min": 71.36666666666667,
+        "short_share": 0.0,
+        "flap_share": 0.0,
+        "ack_rate": 1.0,
+        "actionable_rate": 1.0,
+        "labeled": 2,
+        "noisy": false
+      }
+    ]
+  },
+  "evaluation": {
+    "rules_judged": 15,
+    "true_noisy": 8,
+    "tp": 6,
+    "fp": 0,
+    "fn": 2,
+    "precision": 1.0,
+    "recall": 0.75,
+    "missed_rules": [
+      "DiskUsage>80%",
+      "DiskWatermarkLogWarning"
+    ],
+    "false_alarm_rules": []
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "result": {
+    "window": {
+      "start": "2026-09-01T00:36:01+00:00",
+      "end": "2026-10-01T18:01:58+00:00",
+      "days": 30.73
+    },
+    "totals": {
+      "alerts": 5570,
+      "per_day": 181.27760845907932,
+      "rules": 13,
+      "entities": 24,
+      "sources": [
+        "synthetic"
+      ],
+      "still_open": 3
+    },
+    "by_severity": {
+      "critical": 74,
+      "high": 123,
+      "warning": 5370,
+      "info": 3
+    },
+    "pareto": {
+      "rules_for_80pct_volume": 3,
+      "top10pct_rules_share": 0.31597845601436264,
+      "top_n": 1
+    },
+    "actionable": {
+      "labeled": 5570,
+      "rate": 0.06732495511669659
+    },
+    "noise": {
+      "noisy_rules": 3,
+      "noisy_volume": 5200,
+      "noisy_volume_share": 0.933572710951526,
+      "criteria": "count>=10 ve (kısa süreli(<5 dk)>=%50 veya tekrar>=%50 veya ack<%20)"
+    },
+    "timing": [
+      {
+        "severity": "critical",
+        "count": 74,
+        "mtta_n": 50,
+        "mtta_median_min": 7.516666666666667,
+        "mtta_p90_min": 21.853333333333335,
+        "mttr_n": 74,
+        "mttr_median_min": 66.6,
+        "mttr_p90_min": 108.565
+      },
+      {
+        "severity": "high",
+        "count": 123,
+        "mtta_n": 97,
+        "mtta_median_min": 7.566666666666666,
+        "mtta_p90_min": 25.61000000000001,
+        "mttr_n": 120,
+        "mttr_median_min": 67.875,
+        "mttr_p90_min": 110.77166666666666
+      },
+      {
+        "severity": "warning",
+        "count": 5370,
+        "mtta_n": 465,
+        "mtta_median_min": 8.15,
+        "mtta_p90_min": 21.766666666666673,
+        "mttr_n": 5370,
+        "mttr_median_min": 2.3333333333333335,
+        "mttr_p90_min": 3.75
+      },
+      {
+        "severity": "info",
+        "count": 3,
+        "mtta_n": 3,
+        "mtta_median_min": 4.2,
+        "mtta_p90_min": 5.266666666666667,
+        "mttr_n": 3,
+        "mttr_median_min": 2245.633333333333,
+        "mttr_p90_min": 3295.34
+      }
+    ],
+    "night_pages": {
+      "count": 80,
+      "tz_offset_hours": 3.0,
+      "per_week": 18.225396900733287
+    },
+    "bursts": {
+      "labeled": {
+        "incidents_total": 12,
+        "incident_bursts": 12,
+        "noise_bursts": 589,
+        "incidents_split_across_bursts": 0
+      },
+      "bursts": 601,
+      "alerts_in_bursts": 2492,
+      "share_in_bursts": 0.4473967684021544,
+      "avg_burst_size": 4.146422628951747,
+      "max_burst_size": 27,
+      "reduction_ratio": 1.513998369122044
+    },
+    "rules": [
+      {
+        "rule": "PingLoss",
+        "count": 1760,
+        "per_day": 57.279818830876046,
+        "entities": 6,
+        "median_duration_min": 2.283333333333333,
+        "short_share": 1.0,
+        "flap_share": 0.07613636363636364,
+        "ack_rate": 0.07840909090909091,
+        "actionable_rate": 0.03125,
+        "labeled": 1760,
+        "noisy": true
+      },
+      {
+        "rule": "HighLoadAverage",
+        "count": 1740,
+        "per_day": 56.628911798707,
+        "entities": 6,
+        "median_duration_min": 2.25,
+        "short_share": 1.0,
+        "flap_share": 0.07586206896551724,
+        "ack_rate": 0.08850574712643679,
+        "actionable_rate": 0.027586206896551724,
+        "labeled": 1740,
+        "noisy": true
+      },
+      {
+        "rule": "HighCPU>80%",
+        "count": 1700,
+        "per_day": 55.327097734368905,
+        "entities": 6,
+        "median_duration_min": 2.283333333333333,
+        "short_share": 1.0,
+        "flap_share": 0.06764705882352941,
+        "ack_rate": 0.07764705882352942,
+        "actionable_rate": 0.03235294117647059,
+        "labeled": 1700,
+        "noisy": true
+      },
+      {
+        "rule": "DiskUsage>80%",
+        "count": 170,
+        "per_day": 5.532709773436891,
+        "entities": 6,
+        "median_duration_min": 1001.3916666666667,
+        "short_share": 0.0,
+        "flap_share": 0.0,
+        "ack_rate": 0.2411764705882353,
+        "actionable_rate": 0.1,
+        "labeled": 170,
+        "noisy": false
+      },
+      {
+        "rule": "QueueBacklog",
+        "count": 46,
+        "per_day": 1.4970861739888057,
+        "entities": 18,
+        "median_duration_min": 65.875,
+        "short_share": 0.0,
+        "flap_share": 0.08695652173913043,
+        "ack_rate": 0.7391304347826086,
+        "actionable_rate": 1.0,
+        "labeled": 46,
+        "noisy": false
+      },
+      {
+        "rule": "HealthcheckFailed",
+        "count": 45,
+        "per_day": 1.4645408223803535,
+        "entities": 20,
+        "median_duration_min": 70.11666666666666,
+        "short_share": 0.0,
+        "flap_share": 0.044444444444444446,
+        "ack_rate": 0.6888888888888889,
+        "actionable_rate": 1.0,
+        "labeled": 45,
+        "noisy": false
+      },
+      {
+        "rule": "LatencyP95>1s",
+        "count": 45,
+        "per_day": 1.4645408223803535,
+        "entities": 20,
+        "median_duration_min": 70.46666666666667,
+        "short_share": 0.0,
+        "flap_share": 0.06666666666666667,
+        "ack_rate": 0.6444444444444445,
+        "actionable_rate": 1.0,
+        "labeled": 45,
+        "noisy": false
+      },
+      {
+        "rule": "HTTP5xxRate>5%",
+        "count": 34,
+        "per_day": 1.1065419546873783,
+        "entities": 18,
+        "median_duration_min": 65.36666666666667,
+        "short_share": 0.0,
+        "flap_share": 0.029411764705882353,
+        "ack_rate": 0.7941176470588235,
+        "actionable_rate": 1.0,
+        "labeled": 34,
+        "noisy": false
+      },
+      {
+        "rule": "ServiceDown",
+        "count": 12,
+        "per_day": 0.3905442193014276,
+        "entities": 10,
+        "median_duration_min": 38.3,
+        "short_share": 0.0,
+        "flap_share": 0.0,
+        "ack_rate": 1.0,
+        "actionable_rate": 1.0,
+        "labeled": 12,
+        "noisy": false
+      },
+      {
+        "rule": "DBReplicationLag",
+        "count": 8,
+        "per_day": 0.26036281286761837,
+        "entities": 5,
+        "median_duration_min": 50.75833333333333,
+        "short_share": 0.0,
+        "flap_share": 0.0,
+        "ack_rate": 1.0,
+        "actionable_rate": 1.0,
+        "labeled": 8,
+        "noisy": false
+      },
+      {
+        "rule": "BackupJobFailed",
+        "count": 4,
+        "per_day": 0.13018140643380918,
+        "entities": 4,
+        "median_duration_min": 219.49166666666667,
+        "short_share": 0.0,
+        "flap_share": 0.0,
+        "ack_rate": 1.0,
+        "actionable_rate": 1.0,
+        "labeled": 4,
+        "noisy": false
+      },
+      {
+        "rule": "CertExpiry<30d",
+        "count": 3,
+        "per_day": 0.0976360548253569,
+        "entities": 2,
+        "median_duration_min": 2245.633333333333,
+        "short_share": 0.0,
+        "flap_share": 0.0,
+        "ack_rate": 1.0,
+        "actionable_rate": 1.0,
+        "labeled": 3,
+        "noisy": false
+      },
+      {
+        "rule": "DiskUsage>90%",
+        "count": 3,
+        "per_day": 0.0976360548253569,
+        "entities": 3,
+        "median_duration_min": null,
+        "short_share": null,
+        "flap_share": 0.0,
+        "ack_rate": 0.6666666666666666,
+        "actionable_rate": 1.0,
+        "labeled": 3,
+        "noisy": false
+      }
+    ]
+  },
+  "evaluation": {
+    "rules_judged": 9,
+    "true_noisy": 4,
+    "tp": 3,
+    "fp": 0,
+    "fn": 1,
+    "precision": 1.0,
+    "recall": 0.75,
+    "missed_rules": [
+      "DiskUsage>80%"
+    ],
+    "false_alarm_rules": []
+  }
+}
